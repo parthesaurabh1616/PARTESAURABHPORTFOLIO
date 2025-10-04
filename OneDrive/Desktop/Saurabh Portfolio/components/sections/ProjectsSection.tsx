@@ -16,206 +16,212 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      shortDescription: 'Full-stack e-commerce solution with real-time inventory management',
+      title: 'AI-Powered E-Commerce Platform',
+      shortDescription: 'Full-stack e-commerce solution with ML recommendations and real-time analytics',
       image: '/project1.jpg',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
+      tech: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'Docker', 'TensorFlow'],
       category: 'Full Stack',
-      githubUrl: 'https://github.com/saurabh/ecommerce-platform',
-      liveUrl: 'https://ecommerce-demo.com',
-      detailedDescription: 'A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, product catalog, shopping cart, payment processing, and admin dashboard.',
+      githubUrl: 'https://github.com/parthesaurabh1616/ai-ecommerce-platform',
+      liveUrl: 'https://ai-ecommerce-demo.vercel.app',
+      detailedDescription: 'A sophisticated e-commerce platform featuring AI-powered product recommendations, real-time inventory management, and advanced analytics dashboard. Built with modern web technologies and machine learning integration.',
       features: [
-        'User authentication and authorization',
-        'Product catalog with search and filters',
-        'Shopping cart and checkout process',
-        'Payment integration with Stripe',
-        'Admin dashboard for inventory management',
-        'Real-time order tracking',
-        'Email notifications',
-        'Responsive design for all devices'
+        'AI-powered product recommendations using collaborative filtering',
+        'Real-time inventory management with WebSocket updates',
+        'Advanced search with Elasticsearch integration',
+        'Payment processing with Stripe and PayPal',
+        'Admin dashboard with analytics and reporting',
+        'Mobile-responsive PWA with offline support',
+        'Multi-language support with i18n',
+        'Automated email marketing campaigns'
       ],
       architecture: {
-        frontend: 'React with TypeScript, Tailwind CSS, Redux Toolkit',
-        backend: 'Node.js with Express.js, JWT authentication',
-        database: 'PostgreSQL with Prisma ORM',
-        cloud: 'AWS EC2, RDS, S3 for file storage',
-        deployment: 'Docker containers with CI/CD pipeline'
+        frontend: 'Next.js 14 with TypeScript, Tailwind CSS, Zustand state management',
+        backend: 'Node.js with Express.js, JWT authentication, Redis caching',
+        database: 'PostgreSQL with Prisma ORM, Redis for session management',
+        ai: 'TensorFlow.js for client-side ML, Python microservice for recommendations',
+        cloud: 'AWS EC2, RDS, S3, CloudFront CDN, Lambda functions',
+        deployment: 'Docker containers with GitHub Actions CI/CD pipeline'
       },
       challenges: [
-        'Scalable architecture for high traffic',
-        'Secure payment processing',
-        'Real-time inventory updates',
-        'Mobile-responsive design'
+        'Implementing real-time ML recommendations with low latency',
+        'Scaling WebSocket connections for high concurrent users',
+        'Optimizing database queries for complex product searches',
+        'Building responsive design for complex admin interfaces'
       ]
     },
     {
       id: 2,
-      title: 'Cloud Infrastructure Automation',
-      shortDescription: 'Infrastructure as Code with Terraform and Kubernetes deployment',
+      title: 'Multi-Cloud Infrastructure Automation',
+      shortDescription: 'Infrastructure as Code solution for AWS, Azure, and GCP with automated monitoring',
       image: '/project2.jpg',
-      tech: ['Terraform', 'Kubernetes', 'AWS', 'Docker', 'Python'],
+      tech: ['Terraform', 'Kubernetes', 'AWS', 'Azure', 'GCP', 'Docker', 'Python', 'Ansible'],
       category: 'DevOps',
-      githubUrl: 'https://github.com/saurabh/cloud-infra',
-      liveUrl: 'https://infra-docs.com',
-      detailedDescription: 'Automated cloud infrastructure setup using Infrastructure as Code principles. Includes monitoring, logging, and CI/CD pipelines for seamless deployments.',
+      githubUrl: 'https://github.com/parthesaurabh1616/multi-cloud-infra',
+      liveUrl: 'https://infra-docs.vercel.app',
+      detailedDescription: 'Comprehensive Infrastructure as Code solution supporting multi-cloud deployments across AWS, Azure, and GCP. Features automated provisioning, monitoring, and cost optimization.',
       features: [
-        'Terraform modules for AWS resources',
-        'Kubernetes cluster auto-scaling',
-        'Monitoring with Prometheus and Grafana',
-        'Centralized logging with ELK stack',
-        'Automated CI/CD pipelines',
-        'Cost optimization strategies',
-        'Security compliance automation',
-        'Backup and disaster recovery'
+        'Multi-cloud Terraform modules (AWS, Azure, GCP)',
+        'Kubernetes cluster auto-scaling and management',
+        'Comprehensive monitoring with Prometheus, Grafana, and ELK stack',
+        'Automated CI/CD pipelines with GitHub Actions and Azure DevOps',
+        'Cost optimization with automated resource scheduling',
+        'Security compliance automation (SOC2, GDPR)',
+        'Disaster recovery with automated backup strategies',
+        'Infrastructure drift detection and remediation'
       ],
       architecture: {
-        infrastructure: 'Terraform for AWS resource provisioning',
-        orchestration: 'Kubernetes for container orchestration',
-        monitoring: 'Prometheus, Grafana, and ELK stack',
-        cicd: 'GitHub Actions for automated deployments',
-        security: 'AWS IAM, VPC, and security groups'
+        infrastructure: 'Terraform modules for multi-cloud resource provisioning',
+        orchestration: 'Kubernetes with Helm charts for application deployment',
+        monitoring: 'Prometheus, Grafana, ELK stack, and custom dashboards',
+        cicd: 'GitHub Actions, Azure DevOps, and GitLab CI/CD pipelines',
+        security: 'AWS IAM, Azure AD, GCP IAM with least privilege access',
+        networking: 'VPC peering, VPN connections, and service mesh (Istio)'
       },
       challenges: [
-        'Cost optimization across environments',
-        'Security compliance automation',
-        'Zero-downtime deployments',
-        'Monitoring and alerting setup'
+        'Managing infrastructure across multiple cloud providers',
+        'Implementing consistent security policies across clouds',
+        'Optimizing costs while maintaining high availability',
+        'Automating compliance and security scanning'
       ]
     },
     {
       id: 3,
-      title: 'Real-time Chat Application',
-      shortDescription: 'WebSocket-based chat app with file sharing and voice messages',
+      title: 'Real-time Collaboration Platform',
+      shortDescription: 'WebSocket-based collaboration tool with video conferencing and document sharing',
       image: '/project3.jpg',
-      tech: ['React', 'Socket.io', 'WebRTC', 'MongoDB', 'Node.js'],
+      tech: ['React', 'Socket.io', 'WebRTC', 'MongoDB', 'Node.js', 'Redis', 'Docker'],
       category: 'Full Stack',
-      githubUrl: 'https://github.com/saurabh/realtime-chat',
-      liveUrl: 'https://chat-demo.com',
-      detailedDescription: 'Real-time messaging application supporting text, file sharing, voice messages, and video calls. Built for scalability and real-time performance.',
+      githubUrl: 'https://github.com/parthesaurabh1616/collaboration-platform',
+      liveUrl: 'https://collab-platform.vercel.app',
+      detailedDescription: 'Advanced real-time collaboration platform supporting video conferencing, document collaboration, screen sharing, and team management. Built for enterprise-level scalability.',
       features: [
-        'Real-time text messaging',
-        'File and image sharing',
-        'Voice message recording',
-        'Video calling with WebRTC',
-        'Group chat functionality',
-        'Message encryption',
-        'Emoji reactions',
-        'Message search and filtering'
+        'Real-time video conferencing with WebRTC',
+        'Collaborative document editing with operational transforms',
+        'Screen sharing and whiteboard functionality',
+        'File sharing with version control',
+        'Team management and role-based permissions',
+        'Chat with message encryption',
+        'Meeting recording and transcription',
+        'Mobile apps for iOS and Android'
       ],
       architecture: {
-        frontend: 'React with custom hooks for WebSocket',
-        messaging: 'Socket.io for real-time communication',
-        media: 'WebRTC for voice/video calls',
-        database: 'MongoDB for message storage',
-        files: 'AWS S3 for file uploads'
+        frontend: 'React with custom hooks for WebSocket and WebRTC',
+        messaging: 'Socket.io with Redis adapter for horizontal scaling',
+        media: 'WebRTC with TURN servers for NAT traversal',
+        database: 'MongoDB with replica sets for high availability',
+        files: 'AWS S3 with CloudFront for global file distribution',
+        auth: 'JWT with refresh tokens and OAuth2 integration'
       },
       challenges: [
-        'Optimizing real-time performance',
-        'Handling concurrent connections',
-        'WebRTC implementation',
-        'Message encryption and security'
+        'Scaling WebSocket connections to handle thousands of users',
+        'Implementing reliable WebRTC connections across different networks',
+        'Building conflict-free collaborative editing with operational transforms',
+        'Optimizing media streaming for low-latency communication'
       ]
     },
     {
       id: 4,
-      title: 'Task Management System',
-      shortDescription: 'Collaborative project management tool with Kanban boards',
+      title: 'Enterprise Task Management System',
+      shortDescription: 'Advanced project management tool with AI-powered insights and automation',
       image: '/project4.jpg',
-      tech: ['Next.js', 'Prisma', 'PostgreSQL', 'TypeScript', 'Tailwind'],
+      tech: ['Next.js', 'Prisma', 'PostgreSQL', 'TypeScript', 'Tailwind', 'OpenAI API'],
       category: 'Software Engineering',
-      githubUrl: 'https://github.com/saurabh/task-manager',
-      liveUrl: 'https://taskmanager-demo.com',
-      detailedDescription: 'Advanced task management system with Kanban boards, time tracking, team collaboration, and project analytics.',
+      githubUrl: 'https://github.com/parthesaurabh1616/enterprise-task-manager',
+      liveUrl: 'https://taskmanager-demo.vercel.app',
+      detailedDescription: 'Comprehensive enterprise task management system featuring AI-powered project insights, automated workflows, and advanced analytics. Designed for large teams and complex projects.',
       features: [
-        'Kanban board visualization',
-        'Task assignment and tracking',
-        'Time tracking and reports',
-        'Team collaboration features',
-        'Project analytics dashboard',
-        'Email notifications',
-        'File attachments',
-        'Custom workflows'
+        'AI-powered project timeline predictions',
+        'Advanced Kanban boards with custom workflows',
+        'Automated task assignment based on skills and workload',
+        'Time tracking with detailed analytics and reporting',
+        'Integration with popular tools (Slack, Jira, GitHub)',
+        'Advanced search with natural language processing',
+        'Custom dashboard builder with drag-and-drop widgets',
+        'Mobile-first responsive design'
       ],
       architecture: {
-        frontend: 'Next.js 14 with App Router',
-        backend: 'Next.js API routes',
-        database: 'PostgreSQL with Prisma ORM',
-        auth: 'NextAuth.js for authentication',
-        ui: 'Tailwind CSS with shadcn/ui components'
+        frontend: 'Next.js 14 with App Router and Server Components',
+        backend: 'Next.js API routes with middleware for authentication',
+        database: 'PostgreSQL with Prisma ORM and connection pooling',
+        ai: 'OpenAI API for natural language processing and insights',
+        auth: 'NextAuth.js with multiple provider support',
+        ui: 'Tailwind CSS with shadcn/ui components and Framer Motion'
       },
       challenges: [
-        'Complex state management',
-        'Real-time updates',
-        'Performance optimization',
-        'Role-based permissions'
+        'Implementing complex state management for real-time updates',
+        'Building AI-powered insights with accurate predictions',
+        'Creating intuitive drag-and-drop interfaces',
+        'Optimizing database queries for large datasets'
       ]
     },
     {
       id: 5,
-      title: 'Data Pipeline for Analytics',
-      shortDescription: 'ETL pipeline processing large datasets with Apache Airflow',
+      title: 'Big Data Analytics Pipeline',
+      shortDescription: 'Scalable data processing pipeline for real-time analytics and ML model training',
       image: '/project5.jpg',
-      tech: ['Python', 'Apache Airflow', 'Snowflake', 'AWS S3', 'dbt'],
+      tech: ['Python', 'Apache Airflow', 'Apache Kafka', 'Apache Spark', 'Snowflake', 'AWS'],
       category: 'Data Engineering',
-      githubUrl: 'https://github.com/saurabh/data-pipeline',
-      liveUrl: 'https://data-dashboard.com',
-      detailedDescription: 'Scalable data pipeline for processing and transforming large datasets from multiple sources into a data warehouse.',
+      githubUrl: 'https://github.com/parthesaurabh1616/big-data-pipeline',
+      liveUrl: 'https://data-analytics-dashboard.vercel.app',
+      detailedDescription: 'Enterprise-grade data pipeline processing terabytes of data daily. Features real-time streaming, batch processing, and machine learning model training with automated monitoring.',
       features: [
-        'Automated data ingestion',
-        'Data transformation workflows',
-        'Quality assurance checks',
-        'Data lineage tracking',
-        'Scheduled batch processing',
-        'Error handling and alerts',
-        'Data warehouse optimization',
-        'Reporting automation'
+        'Real-time data streaming with Apache Kafka',
+        'Batch processing with Apache Spark on AWS EMR',
+        'Data warehouse optimization with Snowflake',
+        'Automated ML model training and deployment',
+        'Data quality monitoring and anomaly detection',
+        'Interactive dashboards with real-time metrics',
+        'Automated data lineage tracking',
+        'Cost optimization with intelligent resource scaling'
       ],
       architecture: {
-        orchestration: 'Apache Airflow for workflow management',
-        storage: 'AWS S3 for raw data ingestion',
-        warehouse: 'Snowflake for data storage',
-        transformation: 'dbt for data modeling',
-        monitoring: 'Custom monitoring dashboard'
+        orchestration: 'Apache Airflow for workflow management and scheduling',
+        streaming: 'Apache Kafka for real-time data ingestion',
+        processing: 'Apache Spark on AWS EMR for distributed computing',
+        storage: 'AWS S3 for data lake, Snowflake for data warehouse',
+        ml: 'MLflow for model lifecycle management, AWS SageMaker',
+        monitoring: 'Custom monitoring dashboard with Grafana and Prometheus'
       },
       challenges: [
-        'Handling large data volumes',
-        'Optimizing query performance',
-        'Ensuring data quality',
-        'Managing complex dependencies'
+        'Processing terabytes of data with optimal performance',
+        'Ensuring data quality and consistency across pipelines',
+        'Implementing real-time monitoring and alerting',
+        'Optimizing costs while maintaining processing speed'
       ]
     },
     {
       id: 6,
       title: 'Microservices API Gateway',
-      shortDescription: 'API Gateway managing multiple microservices with authentication',
+      shortDescription: 'Enterprise API gateway with advanced routing, security, and monitoring',
       image: '/project6.jpg',
-      tech: ['Kong', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis'],
+      tech: ['Kong', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis', 'Prometheus'],
       category: 'DevOps',
-      githubUrl: 'https://github.com/saurabh/api-gateway',
-      liveUrl: 'https://api-gateway-doc.com',
-      detailedDescription: 'Enterprise-grade API Gateway built with Kong for managing microservices, authentication, rate limiting, and API analytics.',
+      githubUrl: 'https://github.com/parthesaurabh1616/microservices-gateway',
+      liveUrl: 'https://api-gateway-docs.vercel.app',
+      detailedDescription: 'Production-ready API gateway managing hundreds of microservices with advanced routing, authentication, rate limiting, and comprehensive monitoring. Built for enterprise-scale applications.',
       features: [
-        'Service discovery and routing',
-        'JWT authentication and authorization',
-        'Rate limiting and throttling',
-        'Request/response transformation',
-        'API analytics and monitoring',
-        'Circuit breaker patterns',
-        'Load balancing',
-        'Logging and tracing'
+        'Advanced service discovery and load balancing',
+        'JWT and OAuth2 authentication with RBAC',
+        'Intelligent rate limiting and throttling',
+        'Request/response transformation and validation',
+        'Real-time API analytics and monitoring',
+        'Circuit breaker patterns for fault tolerance',
+        'Automated API documentation generation',
+        'Multi-region deployment with failover'
       ],
       architecture: {
-        gateway: 'Kong API Gateway',
-        orchestration: 'Kubernetes for service deployment',
-        cache: 'Redis for caching and sessions',
-        database: 'PostgreSQL for configuration',
-        monitoring: 'Prometheus and Grafana'
+        gateway: 'Kong API Gateway with custom plugins',
+        orchestration: 'Kubernetes with Helm charts for service deployment',
+        cache: 'Redis cluster for caching and session management',
+        database: 'PostgreSQL for configuration and analytics data',
+        monitoring: 'Prometheus, Grafana, and custom metrics collection',
+        security: 'mTLS, API key management, and DDoS protection'
       },
       challenges: [
-        'Service discovery implementation',
-        'Authentication across services',
-        'Rate limiting optimization',
-        'Monitoring and observability'
+        'Implementing zero-downtime deployments for gateway updates',
+        'Managing authentication across hundreds of microservices',
+        'Optimizing performance while maintaining security',
+        'Building comprehensive monitoring and observability'
       ]
     }
   ]
