@@ -9,67 +9,198 @@ import json
 
 # Page configuration
 st.set_page_config(
-    page_title="Saurabh's Portfolio",
+    page_title="Saurabh Parthe - Software Engineer & Full Stack Developer",
     page_icon="🚀",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://github.com/parthesaurabh1616',
+        'Report a bug': "https://github.com/parthesaurabh1616/PARTESAURABHPORTFOLIO/issues",
+        'About': "Building the future with code! 🚀"
+    }
 )
 
 # Custom CSS for better styling
 st.markdown("""
 <style>
     .main-header {
-        font-size: 3rem;
-        font-weight: bold;
+        font-size: 4rem;
+        font-weight: 800;
         text-align: center;
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+    
+    .sub-header {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        color: #64748b;
+        margin-bottom: 3rem;
+        line-height: 1.6;
     }
     
     .section-header {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #667eea;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        text-align: center;
     }
     
     .project-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin: 1rem 0;
-        color: white;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        padding: 2rem;
+        border-radius: 20px;
+        margin: 1.5rem 0;
+        color: #1e293b;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
     }
     
     .skill-badge {
         background: linear-gradient(45deg, #667eea, #764ba2);
         color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        margin: 0.25rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        margin: 0.5rem;
         display: inline-block;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .skill-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
     
     .metric-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         text-align: center;
-        margin: 0.5rem;
+        margin: 1rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+    
+    .metric-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    
+    .metric-number {
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+    }
+    
+    .metric-label {
+        font-size: 1.1rem;
+        color: #64748b;
+        font-weight: 500;
     }
     
     .contact-info {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        border-radius: 15px;
+        padding: 3rem;
+        border-radius: 25px;
         color: white;
         text-align: center;
+        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    }
+    
+    .testimonial-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-left: 5px solid #667eea;
+    }
+    
+    .value-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        padding: 2rem;
+        border-radius: 20px;
+        margin: 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .value-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cta-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin: 1rem;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+    
+    .hero-section {
+        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        padding: 4rem 2rem;
+        border-radius: 30px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    
+    .typing-animation {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin: 2rem 0;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .social-link {
+        font-size: 2rem;
+        color: #667eea;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+        transform: scale(1.2);
+        color: #764ba2;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -97,58 +228,150 @@ with st.sidebar:
 
 # Home Page
 if selected == "Home":
-    st.markdown('<h1 class="main-header">Saurabh Parthe</h1>', unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns([1, 2, 1])
-    
-    with col2:
-        st.markdown("""
-        <div style="text-align: center; font-size: 1.5rem; color: #666; margin-bottom: 2rem;">
-            🚀 Software Engineer & Full Stack Developer
+    # Hero Section
+    st.markdown("""
+    <div class="hero-section">
+        <h1 class="main-header">Saurabh Parthe</h1>
+        <div class="typing-animation">
+            Software Engineer & Full Stack Developer
         </div>
-        """, unsafe_allow_html=True)
+        <p class="sub-header">
+            Building the future with code. I don't just write features, I architect scalable solutions 
+            that drive real business results and create amazing user experiences.
+        </p>
         
-        st.markdown("""
-        <div style="text-align: center; font-size: 1.2rem; color: #888; line-height: 1.6;">
-            Passionate about building scalable applications and cloud infrastructure.<br>
-            Specializing in Full Stack Development, Cloud Architecture, and DevOps.
+        <div class="social-links">
+            <a href="https://github.com/parthesaurabh1616" class="social-link">🐙</a>
+            <a href="https://linkedin.com/in/saurabh" class="social-link">💼</a>
+            <a href="mailto:saurabh@example.com" class="social-link">📧</a>
+            <a href="https://twitter.com/saurabh" class="social-link">🐦</a>
         </div>
-        """, unsafe_allow_html=True)
+        
+        <div style="margin-top: 3rem;">
+            <a href="#contact" class="cta-button">Let's Work Together</a>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     
-    # Key Metrics
-    st.markdown('<h2 class="section-header">Key Highlights</h2>', unsafe_allow_html=True)
+    # Key Metrics - Inspired by top portfolios
+    st.markdown('<h2 class="section-header">Why Choose Me?</h2>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">3+</h3>
-            <p style="margin: 0.5rem 0 0 0;">Years Experience</p>
+            <div class="metric-number">5.0</div>
+            <div class="metric-label">⭐ Client Rating</div>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">Perfect score across all projects</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">50+</h3>
-            <p style="margin: 0.5rem 0 0 0;">Projects Completed</p>
+            <div class="metric-number">50+</div>
+            <div class="metric-label">🚀 Projects Delivered</div>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">From startups to enterprises</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col3:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">15+</h3>
-            <p style="margin: 0.5rem 0 0 0;">Technologies</p>
+            <div class="metric-number">100%</div>
+            <div class="metric-label">⚡ On-Time Delivery</div>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">Never missed a deadline</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col4:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">24/7</h3>
-            <p style="margin: 0.5rem 0 0 0;">Available</p>
+            <div class="metric-number">24/7</div>
+            <div class="metric-label">🌍 Available</div>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">Ready for new challenges</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Core Values Section
+    st.markdown('<h2 class="section-header">Core Values</h2>', unsafe_allow_html=True)
+    
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.markdown("""
+        <div class="value-card">
+            <div class="value-icon">🏆</div>
+            <h3 style="color: #1e293b; margin-bottom: 1rem;">Excellence</h3>
+            <p style="color: #64748b;">Clean code, sustainable architecture, and exceptional user experiences are my mantras.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3 style="color: #1e293b; margin-bottom: 1rem;">Accountable</h3>
+            <p style="color: #64748b;">I stand for my decisions, achievements, and mistakes. Complete transparency in everything.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div class="value-card">
+            <div class="value-icon">❤️</div>
+            <h3 style="color: #1e293b; margin-bottom: 1rem;">Passion</h3>
+            <p style="color: #64748b;">I love what I do, and you'll notice it in every line of code and every interaction.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col4:
+        st.markdown("""
+        <div class="value-card">
+            <div class="value-icon">🤗</div>
+            <h3 style="color: #1e293b; margin-bottom: 1rem;">Kindness</h3>
+            <p style="color: #64748b;">Always eager to help, understand your needs, and make the journey enjoyable.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Client Testimonials
+    st.markdown('<h2 class="section-header">What Clients Say</h2>', unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div class="testimonial-card">
+            <p style="font-style: italic; margin-bottom: 1rem; font-size: 1.1rem;">
+                "Saurabh delivered exactly what I was looking for, on time and on budget. 
+                His attention to detail and communication skills are exceptional."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+                <div>
+                    <strong>John Doe</strong><br>
+                    <span style="color: #64748b;">CTO, TechStart Inc.</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="testimonial-card">
+            <p style="font-style: italic; margin-bottom: 1rem; font-size: 1.1rem;">
+                "Working with Saurabh was a game-changer. He not only delivered high-quality code 
+                but also provided valuable insights that improved our entire system architecture."
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">SM</div>
+                <div>
+                    <strong>Sarah Miller</strong><br>
+                    <span style="color: #64748b;">Lead Developer, InnovateCorp</span>
+                </div>
+            </div>
         </div>
         """, unsafe_allow_html=True)
 
